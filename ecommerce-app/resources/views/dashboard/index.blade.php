@@ -1,6 +1,4 @@
-<!-- resources/views/home.blade.php -->
-
-@extends('layouts.user-app')
+@extends('layouts.dashboard-app')
 
 @section('content')
     <h1>Welcome to the Homepage</h1>

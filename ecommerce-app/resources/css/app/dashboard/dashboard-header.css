@@ -1,0 +1,153 @@
+
+
+.logo-container{
+    display: flex;
+    width:80%;
+    margin:0%;
+    padding:0%;
+    gap:1%;
+    align-items: center;
+}
+
+.logo-img {
+    width:50px;
+    height: 50px;
+    border-radius: 100%;
+    border:1px solid var(--secondary);
+    box-shadow: var(--box);
+}
+.logo-container h1{
+    margin:0%;
+    padding:0%;
+    line-height: 0%;
+    color:var(--name);
+}
+.group-2{
+   display: flex;
+   width:10%;
+   justify-content: end;
+   align-items: center;
+}
+.noti-container{
+    
+    position: relative; 
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+}
+.noti-container ion-icon{
+    color:var(--secondary);
+    font-size: larger;
+}
+.noti-container spam{
+    position: absolute;
+    top:-5px;
+    left: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%; 
+    padding: 2px 6px; 
+    font-size: 10px; 
+    line-height: 1; 
+}
+
+
+.user-menu-container{
+    display: flex;
+    width:10%;
+    justify-content: end;
+    padding-right: 5px;
+    cursor: pointer;
+    position: relative;
+
+}
+.user-menu-container img{
+    width:50px;
+    height:50px;
+    border-radius: 100%;
+    border:1px solid white;
+    position: relative;
+    box-shadow: var(--box);
+    transition: 0.9s;
+    
+}
+.user-menu-container .setting-icon{
+    position: absolute;
+    bottom: 0%;
+    right: 7px;
+    font-size: larger;
+    color:black;
+    transition: 0.9s;
+
+
+}
+.user-list {
+    position: absolute;
+    width: 20%;
+    padding: 20px;
+    top:8vh;
+    right: -100%; 
+    border: 2px solid white;
+    height: 90vh;
+    z-index: 10;
+    background-color: var(--primary);
+    transition: right 0.5s ease-in-out;
+    
+}
+
+.user-list.show {
+    right: -1%; 
+}
+
+.user-list.hide {
+    
+    right: -100%; 
+}
+
+.user-profile{
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+   
+}
+.user-profile img{
+    width:80px;
+    height:80px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary);
+    box-shadow: var(--box);
+    display: inline;
+}
+.user-profile h4{
+    color:var(--title);
+    font-weight: bold;
+    display: inline;
+    margin-left: 10px; 
+
+}
+.rotate {
+    animation: rotate 0.5s linear forwards; /* Adjust duration as needed */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.unrotate {
+    animation: unrotate 0.5s linear forwards;
+}
+
+@keyframes unrotate {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}

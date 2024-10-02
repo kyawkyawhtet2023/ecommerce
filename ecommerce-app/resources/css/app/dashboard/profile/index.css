@@ -1,0 +1,159 @@
+.container{
+    width:98%;
+    max-width: 1200px;
+    margin:10px auto;
+    padding:10px;
+    border-radius: 5px;
+    display: block;
+    animation:  up 2s forwards ;
+   
+}
+
+ .group-form {
+    display: flex;
+    width:95%;
+    justify-content: center;
+    gap:10%;
+    margin:auto;
+    margin-top: 10px ;
+    box-shadow: var(--box);
+    padding:10px;
+ }
+ .image-group{
+    display:flex;
+    flex-direction:column;
+    box-shadow: var(--box);
+    border-radius: 3px;
+    width:100%;
+    
+ }
+ .image-group img {
+   width: 100%;
+   aspect-ratio: 1 / 1; /* Sets the image ratio to 1:1 */
+   object-fit: contain;
+}
+ .image-group label{
+    text-align: center;
+    font-weight: bold;
+    width:100%;
+    font-size: large;
+    line-height: 20px;
+    padding:5px 0px;
+ }
+ .color-group{
+   width: 100%;
+   height:fit-content;
+   display: flex;
+   gap:10px;
+   flex-direction: column-reverse;
+   
+ }
+ .color-box {
+    width:90% ;
+    height: 20px;
+    border-radius: 3px;
+    border:1px solid white;
+    box-shadow: var(--box);
+ }
+
+ .profile{
+   width:95%;
+   margin:auto;
+   margin-top:10px ;
+   box-shadow: var(--box);
+   padding:10px;
+
+ }
+ .form {
+   padding:10px;
+ }
+ .form label{
+   font-size: large;
+   font-weight: bold;
+ }
+ .form spam {
+   font-weight: 400;
+
+ }
+
+
+ .update-container {
+   width: 95%;
+   margin: auto;
+   max-width: 1200px;
+   opacity: 0;
+   animation:  up 2s forwards ;
+   display: none;
+}
+
+
+.update-group-form {
+   width: 95%;
+   display: flex;
+   flex-wrap: wrap; 
+   gap: 1%;
+   box-shadow: var(--box);
+   padding: 10px;
+   margin: auto;
+   margin-top: 10px;
+   text-align: center;
+}
+
+.update-group-form > div {
+   flex: 1 1 calc(33.33% - 1%); /* Each container takes up 1/3 of the available width, minus the gap */
+   box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+.update-group-form label{
+   text-align: center;
+}
+.address{
+   width:100%;
+}
+.address label{
+   text-align: center;
+   font-weight: bold;
+}
+.address textarea{
+   width:90%;
+   line-height: 32px;
+   padding: 5px 10px;
+}
+.update-group-form input{
+   width:80%;
+   padding: 5px 10px;
+}
+label{
+   font-weight: bold;
+}
+input[type="file"]{
+   display: none;
+}
+
+.btn-group {
+   width:90%;
+   margin: auto;
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-between;
+}
+button{
+   padding: 5px 10px;
+   border-radius: 5px;
+   border-color: var(--secondary);
+   background-color:var(--primary);
+   color:var(--secondary);
+   box-shadow: var(--box);
+   transition: 0.8s;
+}
+button:hover{
+   border-color: var(--primary);
+   background-color:var(--secondary);
+   color:var(--primary);
+   transition: 0.8s;
+}
+
+#cancel:hover{
+   border-color: var(--primary);
+   background-color: red;
+   color:var(--secondary);
+}

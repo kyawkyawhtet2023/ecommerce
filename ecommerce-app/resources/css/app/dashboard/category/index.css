@@ -1,0 +1,149 @@
+
+
+
+.container-show{
+    width:80%;
+    margin:auto;
+}
+.container h1{
+   color:var(--primary);
+   text-align: center;
+   user-select: none;
+   
+}
+.container button {
+    background-color: var(--primary);
+    color:var(--secondary);
+    padding:5px 10px;
+    border-radius: 5px;
+    border-color: var(--secondary);
+    box-shadow: var(--box);
+    transition: 0.8s;
+    font-weight: 400;
+    user-select: none;
+}
+.container button:hover {
+    background-color: var(--secondary);
+    color:var(--primary);
+    border-color: var(--primary);
+    transition: 0.8s;
+    font-weight: 400;
+}
+.container table {
+    margin:auto;
+    margin-top: 20px;
+    box-shadow: var(--box);
+    width:100%;
+    user-select: none;
+}
+.container table thead {
+    background-color: var(--primary);
+    color:var(--secondary);
+    
+    
+}
+.container table thead th{
+  padding:5px 10px
+}
+.container table tbody {
+    transition: 0.8s;
+    background-color: rgba(238, 238, 238, 0.836);
+}
+.container table tbody tr:hover {
+    background-color: white;
+    transition: 0.8s;
+    
+
+
+}
+.container table tbody tr td {
+    text-align: center;
+    padding:5px;
+}
+.container table tbody tr td  img{
+    border-radius: 5px;
+    border:1px solid var(--primary);
+    box-shadow: var(--box);
+    cursor: pointer;
+    transition: 0.8s;
+}
+.container table tbody tr td img:hover{
+    scale: 1.5;
+    transition: 1s;
+}
+
+
+
+
+
+.edit-container ,.container-create {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    z-index: 8; 
+    animation:up 0.5S forwards;
+}
+
+.edit-container form , .container-create form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    margin:auto;
+    
+    max-width: 600px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-group{
+    display: flex;
+    gap:20%;
+    margin:2% auto;
+    place-items: center;
+}
+.form-group label{
+    text-align: center;
+    font-weight: bold;
+}
+.row{
+     display: grid;
+     width:80%;
+     text-align: center;
+}
+.row label{
+    font-weight: bold;
+    font-size: large;
+    line-height: 32px;
+}
+.row input{
+    padding: 5px 10px;
+    font-size: medium;
+    font-weight: 500;
+    
+}
+.row input:focus{
+    outline-color: var(--primary);
+
+}
+#edit-preview, #create-preview {
+    display: block;
+    margin-top: 10px;
+    max-width: 100px;
+    border-radius: 5px;
+    border:1px solid var(--primary);
+    box-shadow: var(--box);
+}
+#edit-image ,#create-img {
+    display: none;
+}
+.container-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}

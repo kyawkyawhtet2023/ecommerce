@@ -20,16 +20,33 @@ class CategoryController extends Controller
         return view('categories.create');
     }
 
+    // public function store(StoreCategoryRequest $request)
+    // {
+       
+    //     $imagePath = $this->storeImage($request);
+
+       
+    //     Category::create(array_merge($request->validated(), $imagePath));
+
+    //     return redirect()->route('categories.index')->with('success', 'Category created successfully!');
+    // }
+
+
     public function store(StoreCategoryRequest $request)
-    {
-       
-        $imagePath = $this->storeImage($request);
+{
+   
+    $imagePath = $this->storeImage($request);
 
-       
-        Category::create(array_merge($request->validated(), $imagePath));
+    
+    $category = Category::create(array_merge($request->validated(), $imagePath));
 
-        return redirect()->route('categories.index')->with('success', 'Category created successfully!');
-    }
+    
+    return response()->json([
+        'success' => true,
+        'message' => 'Category created successfully!',
+        'category' => $category
+    ]);
+}
 
     public function edit(Category $category)
     {
@@ -38,25 +55,25 @@ class CategoryController extends Controller
 
     public function update(StoreCategoryRequest $request, Category $category)
     {
-        // Delete old image if a new one is uploaded
+        
         $this->deleteOldImage($request, $category);
 
-        // Store the new image and get the path
+       
         $imagePath = $this->storeImage($request);
 
-        // Update the category with validated data and the new image path
+       
         $category->update(array_merge($request->validated(), $imagePath));
 
-        // Check if the request is an AJAX request
+        
         if ($request->ajax()) {
             return response()->json([
                 'success' => true,
                 'message' => 'Category updated successfully!',
-                'category' => $category, // Optionally return the updated category
+                'category' => $category, 
             ]);
         }
 
-        // Fallback for non-AJAX request (if needed)
+        
         return redirect()->route('categories.index')->with('success', 'Category updated successfully!');
     }
 
@@ -75,7 +92,7 @@ class CategoryController extends Controller
     private function deleteOldImage(Request $request, Category $category)
     {
         if ($request->hasFile('image')) {
-            // Delete old image from storage
+           
             if ($category->image) {
                 Storage::disk('public')->delete($category->image);
             }
@@ -84,13 +101,16 @@ class CategoryController extends Controller
 
     public function destroy(Category $category)
     {
-        // Delete the associated image from storage
+        
         if ($category->image) {
             Storage::disk('public')->delete($category->image);
         }
-
+    
+        
         $category->delete();
-
-        return redirect()->route('categories.index')->with('success', 'Category deleted successfully!');
+    
+    
+        return response()->json(['success' => true, 'message' => 'Category deleted successfully!']);
     }
+    
 }

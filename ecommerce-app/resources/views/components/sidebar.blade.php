@@ -7,7 +7,7 @@
     <a href="/cart" class="{{ request()->is('cart') ? 'active' : '' }}">
         <ion-icon name="people-circle"></ion-icon> Account Control
     </a>
-    <a href="/cart" class="{{ request()->is('cart') ? 'active' : '' }}">
+    <a href="{{route('products.index')}}" class="{{ request()->routeIs('products.index') ? 'active' : '' }}">
         <ion-icon name="cube"></ion-icon> Products Manage
     </a>
 

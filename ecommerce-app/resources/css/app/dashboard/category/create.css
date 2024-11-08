@@ -1,0 +1,55 @@
+.container-create {
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-width:600px;
+    background-color: var(--primary);
+    z-index: 8; 
+    animation:up 0.5S forwards;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--secondary);
+    box-shadow: var(--box);
+    display: none;
+}
+
+.container-create .form-group {
+  
+    display: flex;
+    gap:10%;
+
+}
+
+.container-create label {
+    width:100px;
+    text-align: center;
+    margin-bottom: 10px;
+    color:var(--secondary);
+}
+.container-create input {
+    padding:5px 5px;
+    width:100%;
+}
+
+.container-create .container-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.container-create .container-btn button {
+    padding:3px 5px;
+    background-color: var(--primary);
+    color:var(--secondary);
+    border-radius: 3px;
+    box-shadow: var(--box);
+    border-color: var(--secondary);
+    cursor: pointer;
+    user-select: none;
+    transition: 0.5s;
+}
+.container-create .container-btn button:hover {
+    background-color: var(--secondary);
+    color:var(--primary);
+    transition: 0.5s;
+}
